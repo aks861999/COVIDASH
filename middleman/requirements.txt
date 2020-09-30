@@ -1,0 +1,7 @@
+apscheduler==3.6.3
+pandas==0.24.2
+firebase==3.0.1
+pycrypto==2.6.1
+requests-toolbelt==0.9.1
+numpy==1.18.1
+PyGithub==1.52
