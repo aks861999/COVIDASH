@@ -183,8 +183,8 @@ def scheduled_job():
 
 
 
-    user = "aks861999"
-    password = "fd5d0ccbb8c8faa2fcc9d3e7bc08b1f0273df975"
+    user = "XXXXXXXXX"
+    password = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     g = Github(user,password)
     repo = g.get_user().get_repo('COVIDASH')
 
