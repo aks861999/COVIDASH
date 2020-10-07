@@ -52,10 +52,9 @@ body {
  .log-box{
   background: rgba(37, 35, 35, 0.842);
   color: rgb(162, 0, 255);
-  width: 500px;
-  height: 400px;
-  top: 50%;
-  /*bottom: 40%;*/
+  width: 420px;
+  height: 550px;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
@@ -91,7 +90,8 @@ body {
  }
  
  
- .log-box input[type="email"]
+ .log-box input[type="email"],
+ .log-box input[type="password"]
  {
   border: none;
   border-bottom: 1px solid #fff;
@@ -107,7 +107,11 @@ body {
  }
 
 
-
+ #war
+ {
+  color: #fff;
+  font-size: 12px;
+ }
 
 
 
@@ -126,15 +130,13 @@ body {
  .log-box button{
   border: none;
   outline: none;
-  width: 445px;
+  width: 360px;
   height: 40px;
   font-size: 27px;
   cursor: pointer;
   border-radius: 20px;
   color: rgb(162, 0, 255);
   font-weight: bold;
-  text-align: center;
-
  }
 
 
@@ -144,6 +146,12 @@ body {
  {
    display: inline-block;
    margin-left: 40px;
+ }
+
+ .tab1
+ {
+   display: inline-block;
+   margin-left: 20px;
  }
  
  a{
@@ -179,6 +187,7 @@ body {
  {
    font-family: fantasy;
    color: chartreuse;
+   font-weight: bold;
    margin: 0;
    padding: 0 0 20px;
    text-align: center;
