@@ -1,0 +1,53 @@
+<html>
+<head>
+ <title>COVIDASH_by_AK</title>
+ <!--link rel="stylesheet" href="C:\Downloads\pro\static\css\st.css"-->
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/forget_layout.css') }}">
+</head>
+<body>
+
+    <div class="video-container">
+        <div class="color-overlay"></div>
+        <video autoplay loop muted id="myVideo">
+            <!--source src="C:\Downloads\pro\static\video\vid.mp4" type="video/mp4"-->
+            <source src="{{ url_for('static', filename='video/vid.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    {% if s=='Please Check Your Inbox, An Email Has been Sent Shortly' %}
+        <div class="ok">
+            <h1> Please Check Your Inbox, An Email Has been Sent Shortly.You can <a href="https://covidash-ak.herokuapp.com/">Login Here</a></h1>
+        </div>        
+
+
+
+    {% else %}
+        <div class="log-box">
+            <a href="https://www.linkedin.com/in/akash-biswas/">
+                <img class="usrimg" src="{{ url_for('static', filename='images/oopa.png')}}" />
+            </a>
+
+            <h1><span class="tab"></span>Reset Password</h1>
+            <form action="/reset_password" method="post">
+                <p>Email-ID</p>
+                <br />
+
+                <input name="email" id='fuck' placeholder="Enter E-mail ID" required="" type="email" />
+                
+                <div id="alert">
+                    <h2>{{s}}</h2>
+                </div>
+               
+                <br/>
+
+
+                <button type="submit" onclick="buttonClickEvent()">Reset My Password</button>
+
+            </form>
+        </div>
+    {% endif %}
+
+
+
+</body>
+</html>
