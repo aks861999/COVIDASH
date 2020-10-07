@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: cover;
+ }
+
+ 
+ .video-container {
+     position: fixed;
+     top: 0; right: 0; bottom: 0; left: 0;
+     overflow: hidden;
+     width: 100vw;
+     height: 100vh;
+     float: left;
+     }
+     
+     .color-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: rgb(126, 124, 124);
+     width: 100%;
+     height: 100vh;
+     opacity: 0.5;
+     }
+     
+     #myVideo {
+       position: absolute;
+       top:0;
+       left:0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+     }
+     
+     @media (min-aspect-ratio: 16/9) {
+       #myVideo { height: 300%; top: -200%; }
+     }
+     @media (max-aspect-ratio: 16/9) {
+       #myVideo{ width: 300%; left: -200%; }
+     }
+     /* 2. If supporting object-fit, overriding (1): */
+     @supports (object-fit: cover) {
+       #myVideo {
+         top: 0; left: 0;
+         width: 100%; height: 100%;
+         object-fit: cover;
+       }
+     }
+
+ .log-box{
+  background: rgba(37, 35, 35, 0.842);
+  color: rgb(162, 0, 255);
+  width: 500px;
+  height: 400px;
+  top: 50%;
+  /*bottom: 40%;*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  position: absolute;
+  padding: 70px 30px;
+  float:left;
+ }
+ .usrimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: calc(-100px/2);
+  left: calc(50% - 50px);
+ }
+ h1{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-weight: bold;
+ }
+ .log-box p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+ 
+ }
+ .log-box input{
+  width: 100%;
+  margin-bottom: 20px;
+ }
+ 
+ 
+ .log-box input[type="email"]
+ {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+ }
+ 
+ ::placeholder {
+  color: rgba(255,255,255,.5);
+ }
+
+
+
+
+
+
+ #alert
+ {
+  color: rgb(255, 0, 191);
+  font-size: 14px;
+  font-weight: normal;
+ }
+ 
+
+
+
+
+
+ .log-box button{
+  border: none;
+  outline: none;
+  width: 445px;
+  height: 40px;
+  font-size: 27px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: rgb(162, 0, 255);
+  font-weight: bold;
+  text-align: center;
+
+ }
+
+
+ 
+ 
+ .tab
+ {
+   display: inline-block;
+   margin-left: 40px;
+ }
+ 
+ a{
+  text-decoration: none;
+  border: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 360px;
+  height: 40px;
+  font-size: 27px;
+  cursor: pointer;
+  color: rgb(162, 0, 255);
+  font-weight: bold;
+  text-align: center;
+ }
+
+
+ .ok
+ {
+  background: rgba(37, 35, 35, 0.842);
+  color: rgb(162, 0, 255);
+  width: 820px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  position: absolute;
+  padding: 70px 30px;
+  float:left;
+ }
+
+ .ok h1
+ {
+   font-family: fantasy;
+   color: chartreuse;
+   margin: 0;
+   padding: 0 0 20px;
+   text-align: center;
+ }
+
