@@ -1,0 +1,68 @@
+<html>
+<head>
+ <title>COVIDASH_by_AK</title>
+ <!--link rel="stylesheet" href="C:\Downloads\pro\static\css\st.css"-->
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/index_layout.css') }}">
+</head>
+<body>
+
+    <div class="video-container">
+        <div class="color-overlay"></div>
+        <video autoplay loop muted id="myVideo">
+            <!--source src="C:\Downloads\pro\static\video\vid.mp4" type="video/mp4"-->
+            <source src="{{ url_for('static', filename='video/vid.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    {% if s=="Please Check Your Inbox, Verification mail has been sent successfully" %}
+        <div class="ok">
+            <h1> Please check your Inbox,Verification mail has been sent.You can <a href="https://covidash-ak.herokuapp.com/">Login Here</a></h1>
+        </div>        
+
+
+
+    {% else %}
+        <div class="log-box">
+            <a href="https://www.linkedin.com/in/akash-biswas/">
+                <img class="usrimg" src="{{ url_for('static', filename='images/im.jpeg')}}" />
+            </a>
+
+            <h1><span class="tab"></span>Sign_Up Today<span class="tab"></span>Gain Tomorrow</h1>
+            <form action="/new=True" method="post">
+                <p>Email-ID</p>
+                <br />
+
+                <input name="email" id='fuck' placeholder="Enter E-mail ID" required="" type="email" />
+                <p>Password</p>
+                
+                <br />
+
+                <input name="pass" id='fuck' placeholder="Enter Password" required="" type="password" />
+
+                <div id="war" >
+                    <p>Password should be at least 6 chracters long</p>
+                </div>
+
+                
+                <div id="alert">
+                    <h2>{{s}}</h2>
+                </div>
+               
+                <br/>
+                
+
+
+
+                <button type="submit" onclick="buttonClickEvent()">Submit</button>
+
+                <br/>
+
+                <a href="https://covidash-ak.herokuapp.com/" class="btn btn-primary"><span class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab1"></span>Login</a>
+            </form>
+        </div>
+    {% endif %}
+
+
+
+</body>
+</html>
